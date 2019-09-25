@@ -68,5 +68,14 @@ class TestMathLib(unittest.TestCase):
         e=statistics.pstdev(L)
         self.assertAlmostEqual(r,e)
 
+    def test_list_stdev_non_int(self):
+        L=[]
+        for i in range(10):
+            L.append(random.randint(0,100))
+        e=statistics.pstdev(L)
+        L.append('X')
+        r=math_lib.list_stdev(L)
+        self.assertAlmostEqual(e,r)
+
 if __name__=='__main__':
     unittest.main()
