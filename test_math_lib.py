@@ -41,6 +41,14 @@ class TestMathLib(unittest.TestCase):
         r=math_lib.list_mean(L)
         self.assertEqual(e,r)
 
+    def test_list_stdev_empty_list(self):
+        r=math_lib.list_stdev(None)
+        self.assertEqual(r,None)
+
+    def test_list_stdev_constant(self):
+        r=math_lib.list_stdev([2,2,2,2])
+        self.assertEqual(r,0)
+
 
 if __name__=='__main__':
     unittest.main()
