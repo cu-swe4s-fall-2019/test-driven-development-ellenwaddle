@@ -48,7 +48,3 @@ def list_stdev(L):
                 continue
     st=math.sqrt(sum([(statistics.mean(nums)-x)**2 for x in nums])/len(nums))
     return st
-
-
-#print(mean([2,2,2,2]))
-#print(list_stdev([2,2,2,2]))
