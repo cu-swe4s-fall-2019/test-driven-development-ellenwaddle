@@ -31,6 +31,17 @@ class TestMathLib(unittest.TestCase):
             r=math_lib.list_mean(L)
             e=statistics.mean(L)
             self.assertAlmostEqual(r,e)
-            #self.assertTrue(math.isclose(r,e))
+
+    def test_list_mean_non_int(self):
+        L=[]
+        for i in range(10):
+            L.append(random.randint(0,100))
+        a=L
+        L.append('X')
+        r=math_lib.list_mean(L)
+        e=statistics.mean(a)
+        self.assertEqual(e,r)
+
+
 if __name__=='__main__':
     unittest.main()
