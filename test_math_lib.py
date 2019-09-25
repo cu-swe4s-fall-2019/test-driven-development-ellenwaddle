@@ -58,5 +58,15 @@ class TestMathLib(unittest.TestCase):
         e=statistics.pstdev(L)
         self.assertAlmostEqual(r,e)
 
+    def test_list_stdev_rand_floats(self):
+        L=[]
+        for i  in range(100):
+            for j in range(10):
+                L.append(
+                    random.uniform(0,100))
+        r=math_lib.list_stdev(L)
+        e=statistics.pstdev(L)
+        self.assertAlmostEqual(r,e)
+
 if __name__=='__main__':
     unittest.main()
