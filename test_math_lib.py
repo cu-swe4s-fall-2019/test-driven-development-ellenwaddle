@@ -36,10 +36,9 @@ class TestMathLib(unittest.TestCase):
         L=[]
         for i in range(10):
             L.append(random.randint(0,100))
-        a=L
+        e=statistics.mean(L)
         L.append('X')
         r=math_lib.list_mean(L)
-        e=statistics.mean(a)
         self.assertEqual(e,r)
 
 
