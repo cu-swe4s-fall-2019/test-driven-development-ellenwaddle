@@ -2,10 +2,19 @@
 #to values from stdin at the col number position
 import sys
 
+alllines=[]
+
 def read_stdin_col(col_num):
     if col_num < 1:
         return None
-    for line in sys.stdin:
-        line=line.rstrip().split()
 
-    return line
+    else:
+        focal_data=[]
+        for line in sys.stdin:
+            lines=line.rstrip().split()
+            alllines.append(lines)
+            a=lines[col_num]
+            focal_data.append(a)
+        return focal_data
+
+print(read_stdin_col(2))
