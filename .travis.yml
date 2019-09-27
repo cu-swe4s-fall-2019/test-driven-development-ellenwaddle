@@ -10,7 +10,10 @@ before_install:
     - conda activate test
     - conda install -y pycodestyle
     - conda install --yes python=3.6
-    - conda install matplotlib 
+    - conda install --yes matplotlib
+    - conda install --yes sys
+    - conda install --yes pathlib
+    - conda install --yes unittest
 
 script:
     - python test_data_viz.py
