@@ -75,16 +75,17 @@ def combo(L, out_file_name):
 
         ax=fig.add_subplot(2,1,1)
         ax.set_title(title)
+        ax.set_ylabel('frequency')
+        ax.set_xlabel('value')
         ax.hist(L,3)
 
         ax2=fig.add_subplot(2,1,2)
+        ax2.set_ylabel('frequency')
         ax2.boxplot(L)
-
 
         plt.savefig(out_file_name,bbox_inches='tight')
 
-
-L=[1,2,2,3,4,5,3]
+#L=[1,2,2,3,4,5,3]
 #histogram(L,'histogram_check.png')
 #boxplot(L,'boxplotcheck.png')
-combo(L,'combo')
+#combo(L,'combo')
