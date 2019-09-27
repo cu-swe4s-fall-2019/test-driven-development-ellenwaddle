@@ -26,6 +26,8 @@ def histogram(L, out_file_name):
 
         ax=fig.add_subplot(1,1,1)
         ax.set_title(title)
+        ax.set_xlabel('value')
+        ax.set_ylabel('frequency')
 
         ax.hist(L,3)
 
@@ -51,6 +53,8 @@ def boxplot(L, out_file_name):
         ax=fig.add_subplot(1,1,1)
         ax.set_title(title)
         ax.boxplot(L)
+        ax.set_xlabel('value')
+        ax.set_ylabel('frequency')
 
         plt.savefig(out_file_name,bbox_inches='tight')
 
